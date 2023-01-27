@@ -1,24 +1,22 @@
-const {createApp} = Vue;
+const { createApp } = Vue;
 createApp({
-	data() {
-		return{
-			apiURL:"./server.php",
-            diskList:[ ],
-		}
-	},
+    data() {
+        return {
+            apiURL: "./server.php",
+            diskList: [],
+        }
+    },
     methods: {
-        getApi() {
-            axios.get(this.apiURL, {
-        })
-        .then(function (response) {
-            console.log(response);
-        })
-        .catch(function (error) {
-            console.log(error);
-        })}
-
+        getAPI() {
+            axios.get(this.apiURL)
+              .then((response) => {
+                console.log(response.data);
+                this.diskList = response.data;
+                 console.log(this.diskList) 
+            });
+        },
     },
     created() {
-        
+        this.getAPI();
     },
-}).mount ('#app');
+}).mount('#app');
