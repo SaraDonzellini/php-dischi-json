@@ -9,11 +9,11 @@ createApp({
     methods: {
         getAPI() {
             axios.get(this.apiURL)
-              .then((response) => {
-                console.log(response.data);
-                this.diskList = response.data;
-                 console.log(this.diskList) 
-            });
+                .then((response) => {
+                    console.log(response.data);
+                    this.diskList = response.data;
+                    console.log(this.diskList)
+                });
         },
     },
     created() {
