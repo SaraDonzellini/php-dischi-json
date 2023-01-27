@@ -27,11 +27,11 @@
         <main>
             <ul>
                 <li v-for=" item in diskList ">
-                    {{ item.title }}
-                    {{ item.author }}
-                    {{ item.genre }}
-                    {{ item.year}}
-                    <img :src="item.poster" alt="" srcset="">
+                    <p>Titolo: {{ item.title }}</p>
+                    <p>Autore: {{ item.author }}</p>
+                    <p>Genere: {{ item.genre }}</p>
+                    <p>Anno: {{ item.year}}</p>
+                    <img :src="item.poster" alt="poster">
                 </li>
             </ul>
         </main>
